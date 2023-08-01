@@ -6,9 +6,9 @@
 
 ## 🖥️ 🔹 💻 🔹 📱 Preview:
 
-![PC preview](https://i.postimg.cc/m2swWt4R/for-pc.png)
+[![PC preview](https://i.postimg.cc/R0f5zZ9m/for-pc.png)](https://postimg.cc/HJpPwHVv)
 <br>
-![Tablet and mobile preview](https://i.postimg.cc/6qr5sHXr/fortb-mobile.png)
+[![Tablet and mobile preview](https://i.postimg.cc/8zmXdf1j/fortb-mobile.png)](https://postimg.cc/VJ5Fm608)
 <br>
 <br>
 <br>
