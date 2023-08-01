@@ -1,0 +1,105 @@
+.panel {
+  grid-row: 4/5;
+  grid-column: 3/13;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5%;
+  row-gap: 7%;
+  overflow-y: scroll;
+
+  @include forTablet {
+    grid-template-rows: 40px 1fr;
+  }
+
+  @include forPc {
+    grid-row: 2 / span 3;
+    grid-column: 2/14;
+    grid-template-rows: 10% 10% repeat(5, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 0%;
+    row-gap: 0%;
+    overflow-y: none;
+  }
+
+  .cityForm {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    border-radius: 6px 20px 0px 20px;
+    border: 2px solid $colorBgHeaderDark;
+    text-transform: capitalize;
+    padding-left: 8px;
+    outline: none;
+    font-size: $fontP;
+
+    @include forTablet {
+      font-size: $fontH3;
+    }
+
+    @include forPc {
+      padding-left: 4%;
+      margin-top: 5%;
+      grid-row: 1;
+      grid-column: 6 / 10;
+      border: none;
+      border-bottom: 2px solid $colorBgHeaderDark;
+      background-color: $colorLvl2;
+      border-radius: 0px;
+    }
+
+    &:focus,
+    &:active {
+      border: 2px solid $colorReturnButton;
+    }
+  }
+
+  .currentPhase {
+    grid-row: 1;
+    grid-column: 3/4;
+    border: none;
+    border-radius: 0px 20px 6px 20px;
+    background-color: $colorBgHeaderDark;
+    box-shadow: $shadowBox;
+    padding: 4%;
+    justify-items: center;
+
+    @include forPc {
+      min-height: 80%;
+      grid-row: 2;
+      grid-column: 6/10;
+      margin-bottom: 5%;
+      border-radius: 0px;
+      border: none;
+      border-bottom: 2px solid $colorBgHeaderDark;
+      background-color: $colorLvl2;
+    }
+
+    h3 {
+      padding-top: 3px;
+      font-size: $fontP;
+      font-weight: bold;
+      text-align: center;
+      color: $colorBgDefault;
+
+      @include forTablet {
+        font-size: $fontH2;
+      }
+
+      @include forPc {
+        text-align: left;
+        color: $colorBgHeaderDark;
+      }
+    }
+  }
+
+  .container {
+    grid-column: 1/-1;
+    grid-row: 2;
+
+    @include forPc {
+      grid-column: 1/5;
+      grid-row: 3/7;
+      padding: 2%;
+    }
+  }
+}

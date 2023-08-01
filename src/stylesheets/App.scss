@@ -1,0 +1,38 @@
+@import "./base/reset";
+@import "./base/structure";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./layout/currentDate";
+@import "./layout/panel";
+@import "./layout/activity";
+@import "./layout/modal";
+@import "./layout/text";
+@import "./layout/footer";
+@import "./layout/resources";
+
+canvas {
+  position: absolute;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  z-index: 999;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: $colorBgDefault;
+  position: relative;
+  display: grid;
+  grid-template-columns: 25px repeat(12, 1fr) 25px;
+  grid-template-rows: 20px 80px 10px 1fr 60px;
+
+  @include forTablet {
+    padding: 0% 10%;
+    grid-template-rows: 5% 15% 3% 67% 10%;
+  }
+
+  @include forPc {
+    grid-template-rows: 1% 18% 1fr 8%;
+  }
+}
